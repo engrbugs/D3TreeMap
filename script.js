@@ -8,17 +8,18 @@ async function run() {
 
   const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-  var width = $(window).width() - 230,
-    height = $(window).height() - 180,
+  var width = $(window).width() - 100,
+    height = $(window).height() - 280,
     xPadding = 40,
     yPadding = 40,
     xyrPadding = 40;
+    console.log(width)
   // barWidth = width / data.length;
 
   var svg = d3
     .select("#container")
     .append("svg")
-    .attr("width", width + xPadding + xyrPadding)
+    .attr("width", width-xPadding-4)
     .attr("height", height + yPadding + xyrPadding);
 
   const treemap = d3
