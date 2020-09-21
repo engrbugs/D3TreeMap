@@ -11,10 +11,7 @@ async function run() {
   var width = ($(window).width() <= 1560 ? $(window).width() : 1560) - 100,
     height = $(window).height() - 180,
     xPadding = 40,
-    yPadding = 40,
     xyrPadding = 40;
-    console.log(width)
-  // barWidth = width / data.length;
 
   var svg = d3
     .select("#container")
@@ -55,9 +52,6 @@ async function run() {
       tooltip.innerHTML = `Name: ${name}<br/>
       Genre: ${category}<br/>
       Gross: $ ${Math.round((value/1000000 + Number.EPSILON) * 100) / 100} Million`;
-
-      
-
       tooltip.setAttribute("data-value", value);
     })
     .on("mouseover", () => (tooltip.style.visibility = "visible"))
@@ -67,20 +61,17 @@ async function run() {
     .append("text")
     .selectAll("tspan")
     .data((d) => d.data.name.split(/(?=[A-Z][^A-Z])/g))
-    // d.data.name.split(/(?=[A-Z][^A-Z])/g)
     .enter()
     .append("tspan")
     .attr("style", "font-size: 6px")
     .attr("x", 2)
     .attr("y", (d, i) => 8 + i * 8)
-
     .text((d) => d);
 
   const categories = root
     .leaves()
     .map((d) => d.data.category)
     .filter((e, i, arr) => arr.indexOf(e) === i);
-  console.log(categories);
 
   const blockSize = 20;
   const legendWidth = width-xPadding-4;
@@ -101,7 +92,6 @@ async function run() {
     .attr('fill', d => color(d))
     .attr('x',  ((_, i)=> i*steps+10))
     .attr('y', (blockSize /2 ))
-    // .attr('y', ((_, i)=> i* (blockSize+1)+10))
     .attr('width', blockSize)
     .attr('height', blockSize);
 
@@ -113,7 +103,6 @@ async function run() {
     .attr('fill', 'black')
     .attr('x', ((_, i)=> i*steps+35))
     .attr('y', (blockSize + 4))
-    //.attr('y', (_, i)=>i*(blockSize+1)+25)
     .text(d=>d)
 }
 
