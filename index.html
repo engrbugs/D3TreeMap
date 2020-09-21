@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap"
       rel="stylesheet"
@@ -23,7 +24,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      /* height: 100vh; */
       flex-direction: column;
       margin: 0;
     }
@@ -31,13 +32,16 @@
     h1 {
       font-family: "Montserrat", sans-serif;
       font-size: larger;
-      margin: -40px 0 12px;
+      font-weight: 800;
+      /* margin: -40px 0 12px; */
       color: #222f3e;
     }
 
     svg {
       border-radius: 4px;
       text-align: left;
+      font: 10px sans-serif;
+      border: 2px solid black
     }
 
     .legend {
@@ -68,6 +72,8 @@
       right: 0;
     }
 
+
+
     .legend .box.no-doping {
       background-color: #54a0ff;
     }
@@ -92,11 +98,69 @@
       color: whitesmoke;
       opacity: 0.9;
     }
+
+
+    
+        /* Navbar Home, Marcus, Ryan, and Me will be center */
+        .container-fluid {
+          width: 810px;
+          margin-left: auto;
+          margin-right: auto;
+          border-left: 16px;
+          border-right: 16px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+             
+      .navbar.navbar-default .navbar-brand-left {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        justify-content: left;
+      }
+
+      .navbar.navbar-default .navbar-brand-center {
+        margin: 0;  
+        padding: 0;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        justify-content: center;
+      }
+
+      .navbar.navbar-default .navbar-brand-right {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        justify-content: right;
+      }
+      
+      .navbar.navbar-default {
+        height: 44px;
+        position: inline;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        z-index: 100;
+        background-color: black;
+        color: white;
+        overflow: hidden;
+        position: absolute;
+      }
+
   </style>
   <body>
-    <h1 id="title">Doping VS. Non-Doping in Professional Bicycle Racing</h1>
-    <div id="tooltip" class="tooltip"></div>
-    <div id="legend" class="legend">
+
+    <h1 id="title">KICKSTARTER PLEDGES</h1>
+    <h3 id="description">Hello</h3>
+    <div id="container" class="container">
+      <div id="tooltip" class="tooltip"></div>
+    </div>
+    </div>
+    <!-- <div id="legend" class="legend">
       <div class="text">
         No Doping Allegations
         <div class="box no-doping"></div>
@@ -105,7 +169,10 @@
         Riders with Doping Allegations
         <div class="box doping"></div>
       </div>
-    </div>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
